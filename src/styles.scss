@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3f4550;
+  font-size: 16px;
+  background-color: #F9F9FF;
+  color: #94979e;
+  font-weight: 400;
+  position: relative;
+}
+
+.full {
+  width: 100%;
+}
+
+.inter {
+  font-family: 'Inter';
+}
+
+.border-bottom-title {
+    border-bottom: 3px solid;
+    border-color: #0768ea;
+    width: 70%;
+    display: block;
+    margin-top: 5px;
+}
+
+.widthfit {
+  width: fit-content;
+}
+
+.pd_100 {
+  padding-top: 100px;
+}
+
+@media screen and (min-width: 800px)  {
+  .title-section {
+    font-size: 1.35rem !important;
+    line-height: 1.95rem !important;
+  }
+}
+
+.title-section {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+@font-face {
+  font-family: 'lato';
+  src: url('./assets/Lato\ Regular.ttf');
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a::hover {
+  color: #00c3ff !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@media (min-width: 800px) {
+  ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  ::-webkit-scrollbar-thumb {
+      background-color: #b7b7b7;
+      border-radius: 100px;
+  }
+}
+@media (min-width: 800px) {
+  ::-webkit-scrollbar-track {
+      background-color: #fff;
+  }
+}
+
+
+h3:hover {
+  color: #0768ea;
+}

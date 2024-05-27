@@ -1,0 +1,76 @@
+<!-- <section class="header fixed-top">
+    <div class="header-main navbar-expand-xl">
+        <div class="container-wrap">
+            <div class="header-main">
+              <div class="site-branding">
+                <a class="dark-logo display-none" >
+                      <img style="max-height: 40px!important" src="../../../../assets/dr_to_logo.png">
+                </a>
+            </div>
+      <div class="main-menu header-navbar">
+        <nav class="navbar">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="primary-menu" class="navbar-nav ml-auto mr-auto" *ngFor="let item of listmenu">
+              <li class="nav-item menu-id-92" [ngClass]="{'dropdown menu-item-has-children': item.children}">
+                <a  class="nav-link" [ngClass]="{'dropdown-toggle': item.children}"  title="{{item.name}}" data-toggle="dropdown" routerLink="/{{item.link}}"  >{{item.name}}</a>
+                  <ng-container  *ngIf="item.children">
+                    <ul id="primary-menu" class="dropdown-menu fade-up sub-menu" >
+                      <li class="menu-id-93 "  *ngFor="let item of item.children">
+                        <a class="dropdown-item" style="    padding-left: 15px;
+                        padding-top: 15px;" title="{{item.name}}" routerLink="/{{item.link}}">{{item.name}}</a>
+                      </li>
+                    </ul>
+                  </ng-container>
+
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-action-items">
+        <div class="search-icon"> <a href="javascript: void(0)">  <i class="fa-solid fa-sun"></i></a></div>
+        <div class="search-icon" (click)="search()"> <a >  <i class="fas fa-search"></i></a></div>
+        <div class="search-icon" (click)="sitebar()"> <a > <i class="fa-solid fa-bars"></i></a></div>
+     </div>
+
+    </div>
+        </div>
+        <app-search></app-search>
+        <app-site-mobile></app-site-mobile>
+    </div>
+</section>
+
+
+ -->
+
+
+
+ <header >
+    <nav class="w600:gap-[20px]">
+        <div class="layout_logo">
+          <a href="">
+            <img style="max-height: 40px!important" src="../../../../assets/dr_to_logo.png">
+          </a>
+        </div>
+        <div class="layout_search">
+            <div class="container_search">
+                <div class="search">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="absolute left-[15px] top-1/2 translate-x-[-50%] translate-y-[-50%] cursor-pointer text-textGray hover:text-cps" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path></svg>
+                  <input class="inputsearch" type="search" (keyup.enter)="search()" [(ngModel)]="isSearch"  placeholder="Tìm kiếm" name="" id="">
+                </div>
+
+                <div class="icon_search" (click)="searchmobile()">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-textWhite" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+ </header>
+
+ <!-- <app-search></app-search> -->
+
+ <app-menusearch></app-menusearch>
+
+
+

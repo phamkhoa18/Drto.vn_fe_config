@@ -1,0 +1,52 @@
+<section class="listnews full">
+  <h2 class="title-outstanding title-section inter widthfit">
+    <ng-container *ngIf="this.onedetail == ''">TIN NỔI BẬT</ng-container>
+    <ng-container *ngIf="this.onedetail != ''">Tin về {{this.onedetail.name}}</ng-container>
+    <span class="border-bottom-title"></span>
+  </h2>
+
+  <div class="list-item-news full">
+      <div class="container-list-item-news">
+          <div class="item-new" *ngFor="let item of listnew">
+            <a class="image-over-new" routerLink="/{{item.link}}">
+              <img [src]="this.api.URL + '/uploads/' + item.image " width="300" height="300" class="block h-full w-full object-cover transition-all hover:scale-[1.05] " style="color: transparent;">
+            </a>
+            <div class="content-new">
+              <div class="title-new full">
+                <a class="href-new" routerLink="/{{item.link}}">
+                  <h3 class="inter">{{item.name}}</h3>
+                </a>
+              </div>
+              <div class="description-new" [title]="generateDescription(item.content)">
+                <p class="line-clamp-3 text-ellipsis text-justify text-xs font-[400] text-textGray w600:text-sm">
+                  {{this.generateDescription(item.content)}}
+                </p>
+              </div>
+              <div class="author-new">
+                <div class="container-author-new">
+                  <a class="author" >
+                    <span>{{item.author}}</span>
+                  </a>
+                  <span class="date">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315V7.25Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path>
+                    </svg>
+                    <span>{{getDatePublicPost(item.publish_date)}}</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="more">
+            <a class="herf-more" style="cursor: pointer;" (click)="nextpage()" *ngIf="!isLoading">
+              <span class="underline">Xem thêm</span>
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="rotate-[-90deg]" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path>
+              </svg>
+            </a>
+            <div *ngIf="isLoading" class="loading-spinner">
+              Loading...
+            </div>
+          </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+<section class="home full">
+    <!-- load separate components -->
+
+    <!-- component theards -->
+    <app-theards></app-theards>
+
+
+    <!-- component outstanding -->
+    <app-outstanding [id]="'null'"></app-outstanding>
+
+
+    <!-- component swiper category list news -->
+    <app-swipercategory [id]="'6641e7e0128df9d823ce9d61'"></app-swipercategory>
+
+
+    <!-- phân chia layout 70/30 -->
+    <section class="split_layout">
+        <!-- component list news -->
+        <div class="container_split_layout_one">
+          <app-listnews [id]="'null'"></app-listnews>
+        </div>
+
+        <!-- component ads category -->
+        <div class="container_split_layout_two">
+          <!-- di trú nước úc -->
+            <app-adscategory [id]="'663dbd5c4a8cdbe5e834f987'"></app-adscategory>
+
+            <app-adscategory [id]="'6641ac5341ce33578859a5df'"></app-adscategory>
+        </div>
+    </section>
+
+
+    <!-- component one category -->
+    <!-- swiper scroll value -->
+    <app-swiperitems></app-swiperitems>
+
+    <!-- Quy định pháp luật mới -->
+    <app-swipercategory [id]="'663dbd334a8cdbe5e834f977'"></app-swipercategory>
+
+    <!-- Chính sách nhập cư Úc -->
+    <app-swipercategory [id]="'665193d1694d38de5e69840f'"></app-swipercategory>
+
+
+    <!-- end load separate components -->
+</section>

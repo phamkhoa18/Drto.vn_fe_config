@@ -1,0 +1,35 @@
+<section class="swiper-category">
+  <h2 class="title-swiper-category title-section inter widthfit">{{onedetail.name}}
+    <span class="border-bottom-title"></span>
+  </h2>
+
+  <div class="list-swiper-category" style="overflow: hidden !important;" *ngIf="this.titleSwiperClass != '' && this.listnew.length > 0">
+    <div class="{{this.titleSwiperClass}}">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of listnew">
+          <div class="full overflow-hidden">
+            <div class="item-swiper">
+              <a class="image-over-swiper" routerLink="/{{item.link}}">
+                <img [src]="this.api.URL + '/uploads/' + item.image" width="300" height="300" decoding="async" data-nimg="1" class="h-full w-full object-cover " style="color: transparent;">
+              </a>
+
+              <div class="content-swiper">
+                <a class="content-title-swiper" routerLink="/{{item.link}}">
+                  <h3 class="inter" title="{{item.name}}">{{item.name}}</h3>
+                </a>
+                <a class="author">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="17" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26ZM71.44,198a66,66,0,0,1,113.12,0,89.8,89.8,0,0,1-113.12,0ZM94,120a34,34,0,1,1,34,34A34,34,0,0,1,94,120Zm99.51,69.64a77.53,77.53,0,0,0-40-31.38,46,46,0,1,0-51,0,77.53,77.53,0,0,0-40,31.38,90,90,0,1,1,131,0Z"></path></svg>
+                  <span class="text-xs inter"  title="{{item.author}}">{{item.author}}</span>
+                </a>
+                  <span class="date">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="17" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M230,136.49A102.12,102.12,0,1,1,119.51,26a6,6,0,0,1,1,12A90.13,90.13,0,1,0,218,135.51a6,6,0,1,1,12,1ZM122,72v56a6,6,0,0,0,6,6h56a6,6,0,0,0,0-12H134V72a6,6,0,0,0-12,0Zm38-26a10,10,0,1,0-10-10A10,10,0,0,0,160,46Zm36,24a10,10,0,1,0-10-10A10,10,0,0,0,196,70Zm24,36a10,10,0,1,0-10-10A10,10,0,0,0,220,106Z"></path></svg>
+                    <span class="text-xs inter">{{getDatePublicPost(item.publish_date)}}</span>
+                  </span>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

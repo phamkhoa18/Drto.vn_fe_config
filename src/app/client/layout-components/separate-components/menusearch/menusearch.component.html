@@ -1,0 +1,13 @@
+<div class="search" [ngClass]="{'search-open': isSearch}">
+  <div class="container-fluid">
+      <div class="search-width  text-center">
+          <button type="button" class="close" (click)="setSearch()">
+            <i style="color: #ffff;" class="fa-solid fa-x"></i>
+          </button>
+          <div class="search-form">
+              <input type="search" placeholder="Nhập từ khóa..." [(ngModel)]="searchname" class="search-field search-keyword-desktop">
+              <button type="submit" class="search-btn search-submit desktop-search-submit" (click)="search()">Tìm kiếm</button>
+          </div>
+      </div>
+  </div>
+</div>

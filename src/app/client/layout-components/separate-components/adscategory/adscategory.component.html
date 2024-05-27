@@ -1,0 +1,31 @@
+<section class="ads full max-w-800px" *ngIf="this.onedetail && this.listnew.length > 0">
+  <h2 class="title-outstanding title-section inter widthfit">{{this.onedetail.name}}
+    <span class="border-bottom-title"></span>
+  </h2>
+
+  <a class="block-ads" routerLink="/{{this.onenewfeed[0].link}}">
+    <img loading="lazy" [src]="this.api.URL + '/uploads/' + this.onenewfeed[0].image" width="640" height="360" style="color: transparent;">
+    <div class="overlay-block-ads">
+      <div class="full">
+        <h3 class="inter" title="{{this.onenewfeed[0].name}}">{{this.onenewfeed[0].name}}</h3>
+      </div>
+    </div>
+  </a>
+
+  <div class="list-block-ads">
+      <a class="item-block-ads" *ngFor="let item of listnew"  routerLink="/{{item.link}}">
+        <div class="title-item-block">
+          <h3 class="inter" title="{{item.name}}" style="container-type: inline-size;">{{item.name}}</h3>
+        </div>
+        <img loading="lazy" width="320" height="180" [src]="this.api.URL + '/uploads/' + item.image" style="color: transparent;">
+      </a>
+  </div>
+
+  <div class="more">
+    <a class="herf-more" style="cursor: pointer;" routerLink="/{{this.onedetail.link}}">
+      <span class="underline">Xem thêm</span>
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="rotate-[-90deg]" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path>
+      </svg>
+    </a>
+  </div>
+</section>

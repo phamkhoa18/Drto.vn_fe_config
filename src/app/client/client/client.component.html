@@ -1,0 +1,20 @@
+
+<section class="main">
+  <app-header></app-header>
+  <!-- sidebar -->
+  <div class="sidebar">
+      <app-sidebar></app-sidebar>
+  </div>
+  <!-- sidebar sticky bottom 0 mobile and table -->
+  <div class="sidebar-mobile">
+      <app-sidebarmobile></app-sidebarmobile>
+  </div>
+  <!-- layout -->
+  <div class="layout">
+    <router-outlet></router-outlet>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
+<button id="jumpToTop" title="Lên đầu trang" class="jsx-3921306811 button" (click)="scrollTop()"><i class="jsx-3921306811 fas fa-arrow-up"></i></button>

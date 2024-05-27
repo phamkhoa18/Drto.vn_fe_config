@@ -1,0 +1,127 @@
+.search {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F9F9FF;
+  -webkit-transform: translate(0%, 100%) scale(0, 0);
+  transform: translate(0%, 100%) scale(0, 0);
+  opacity: 0;
+  visibility: hidden;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.search-width {
+  position: relative;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+.search .close {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background-color: #0768ea;
+  border: none;
+  opacity: 1;
+  visibility: visible;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.search-form {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 40px;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+}
+
+.search-form input {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  color: inherit;
+  border: 0px;
+  font-weight: 400;
+  border-radius: 40px 0px 0px 40px;
+  padding: 15px 10px 15px 30px;
+  z-index: 1;
+  border: 1px solid #eee;
+  text-transform: capitalize;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  outline-offset: -2px;
+  -webkit-appearance: none;
+
+}
+
+button, input {
+  overflow: visible;
+}
+
+.search-form .search-btn {
+  background-color: #0768ea;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 0px 40px 40px 0px;
+  width: 130px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.search-field {
+  outline: 0;
+}
+
+.search-width button:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.search.search-open {
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+  transform: translate(0px, 0px) scale(1, 1);
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+}

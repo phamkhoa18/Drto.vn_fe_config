@@ -1,0 +1,240 @@
+.container-list-item-news {
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+@media (min-width: 800px) {
+  .container-list-item-news {
+      gap: 25px;
+  }
+}
+@media (min-width: 1000px) {
+  .item-new {
+      gap: 15px;
+  }
+}
+
+.item-new {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    position: relative;
+}
+
+@media (min-width: 1000px) {
+  .image-over-new {
+      width: 240px !important;
+  }
+}
+@media (min-width: 800px) {
+  .image-over-new {
+      width: 150px;
+  }
+}
+@media (min-width: 500px) {
+  .image-over-new {
+      width: 180px;
+  }
+}
+
+.image-over-new {
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 140px;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin-top: 4px;
+    position: relative;
+    text-decoration: none;
+    color: unset;
+
+    img {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  .container-author-new {
+    gap: 0 !important;
+  }
+}
+
+.content-new {
+    gap: 5px;
+    flex-direction: column;
+    flex: 1 1 0%;
+    display: flex;
+}
+
+.href-new {
+    --tw-text-opacity: 1;
+    color: rgb(33 43 54 / var(--tw-text-opacity));
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: unset;
+    color: inherit;
+    text-decoration: inherit;
+
+    h3 {
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        margin: 0;
+    }
+}
+
+
+@media (min-width: 600px) {
+  .href-new h3 {
+      font-weight: 600;
+  }
+}
+@media (min-width: 600px) {
+  .href-new h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+}
+
+
+.description-new {
+    width: 100%;
+    display: none;
+    p {
+        --tw-text-opacity: 1;
+        color: rgb(33 43 54 / var(--tw-text-opacity));
+        font-weight: 400;
+        font-size: .85rem;
+        line-height: 1.2rem;
+        text-align: justify;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        margin: 0;
+    }
+}
+@media (min-width: 600px) {
+  .description-new {
+      display: block;
+  }
+  .description-new p {
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+}
+
+.author-new {
+    --tw-text-opacity: 1;
+    color: rgb(99 115 129 / var(--tw-text-opacity));
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.container-author-new {
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.author {
+    --tw-text-opacity: 1;
+    color: rgb(26 109 180 / var(--tw-text-opacity));
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1rem;
+    gap: 3px;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: unset;
+
+    span {
+      color: rgb(26 109 180/1);
+    }
+}
+
+@media (min-width: 600px) {
+  .author {
+      font-size: .975rem;
+      line-height: 1.45rem;
+  }
+}
+@media (min-width: 400px) {
+  .author {
+      font-size: .85rem;
+      line-height: 1.2rem;
+  }
+}
+
+.date {
+    font-weight: 300;
+    font-size: .75rem;
+    line-height: 1rem;
+    gap: 3px;
+    align-items: center;
+    display: flex;
+
+    span {
+      font-size: inherit;
+    }
+}
+
+@media (min-width: 600px) {
+  .date {
+      font-size: .975rem;
+      line-height: 1.45rem;
+  }
+}
+@media (min-width: 400px) {
+  .date {
+      font-size: .85rem;
+      line-height: 1.2rem;
+  }
+}
+
+.more {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+
+  a {
+      --tw-text-opacity: 1;
+      color: rgb(33 43 54 / var(--tw-text-opacity));
+      font-weight: 500;
+      font-size: .95rem;
+      line-height: 1.45rem;
+      gap: 3px;
+      align-items: center;
+      height: 35px;
+      display: flex;
+      text-decoration: none;
+      color: unset;
+
+      span {
+        text-decoration-line: underline ;
+      }
+
+  }
+}
